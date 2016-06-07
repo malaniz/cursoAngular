@@ -1,0 +1,9 @@
+<input type="text" ng-model="nombre" />
+<button ng-click="agregar(nombre)"> + </button>
+<br/>
+<input type="text" ng-model="query" />
+<ul>
+  <li ng-repeat="p in personas|filter:query"> {{p}} </li>
+</ul>
+
+<p ng-show="nombre === '1'"> erroooooor </p>

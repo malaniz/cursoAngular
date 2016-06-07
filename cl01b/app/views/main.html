@@ -1,0 +1,9 @@
+<input type="text" ng-model="query" />
+<input type="text" ng-model="nombre" />
+<button class="btn" ng-click="agregar(nombre)"> + </button>
+
+<ul>
+  <li ng-repeat="p in personas|filter:query"> 
+    {{p.nombre}} | {{p.at|date: "HH:mm:ss"}}
+  </li>
+</ul>
