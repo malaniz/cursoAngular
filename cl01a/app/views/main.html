@@ -1,7 +1,24 @@
-<input type="text" ng-model="nombre" />
-<button ng-click="agregar(nombre)"> + </button>
-<br/>
-<input type="text" ng-model="query" />
+<div class="row">
+  <div class="col-md-6">
+    <input type="text" ng-model="nombre" />
+    <button class="btn btn-primary" ng-click="agregar(nombre)"> + </button>
+    <br/>
+  </div>
+
+
+  <div class="col-md-6">
+    <form class="form-inline">
+      <div class="form-group">
+        <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+        <div class="input-group">
+          <div class="input-group-addon">Buscar</div>
+          <input ng-model="query" type="text" class="form-control" id="exampleInputAmount" placeholder="Query">
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>
 <ul>
   <li ng-repeat="p in personas|filter:query"> {{p}} </li>
 </ul>
