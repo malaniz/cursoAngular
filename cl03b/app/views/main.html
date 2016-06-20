@@ -1,0 +1,13 @@
+<form>
+  <input type="text" placeholder="nombre" ng-model="p.nombre" /><br>
+  <input type="text"  placeholder="cat" ng-model="p.categoria" /><br>
+  <input type="text"  placeholder="precio" ng-model="p.precio" /><br>
+  <input type="number"  placeholder="stock" ng-model="p.stock" /><br>
+  <button ng-click="add(p)"> grabar </button>
+</form>
+
+<ul>
+  <li ng-repeat="p in productos"> 
+    {{p._id}} | {{p.nombre}} <a href="/#/detail/{{p._id}}" > Detalle </a>
+  </li>
+</ul>
