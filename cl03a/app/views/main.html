@@ -1,4 +1,11 @@
 
+<div class="alert alert-danger" ng-show="message"> {{message}} </div>
+<h1> Nuevo producto </h1>
+<input type="text" ng-model="p.nombre" class="form-control" placeholder="nombre"> <br>
+<input type="text" ng-model="p.categoria" class="form-control" placeholder="Categoria"> <br>
+<input type="text" ng-model="p.precio" class="form-control" placeholder="Precio"> <br>
+<input type="text" ng-model="p.stock" class="form-control" placeholder="Stock"> <br>
+<button class="btn btn-primary" ng-click="agregar(p)"> Agregar </button>
 <h1> Lista de productos </h1>
 <ul>
   <li ng-repeat="p in productos"> {{p.nombre}} <a href="#/detail/{{p._id}}"> Detalle </a></li>
