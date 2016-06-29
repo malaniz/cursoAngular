@@ -1,0 +1,7 @@
+
+<input type="text" ng-model="p"/>
+<h1> Lista </h1>
+<ul>
+  <li ng-repeat="p in productos">{{p.nombre}} <a ng-href="#/detail/{{p._id}}"> Detalle </a></li>
+</ul>
+
